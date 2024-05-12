@@ -1,0 +1,3 @@
+[submodule "wifi-scanner"]
+	path = wifi-scanner
+	url = https://github.com/SebastiaanHenau/wifi-scanner.git
