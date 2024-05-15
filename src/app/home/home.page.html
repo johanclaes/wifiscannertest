@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Testen-Wifi
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,21 +9,30 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Testen_Wifi</ion-title>
     </ion-toolbar>
   </ion-header>
 
   <div>
-    <ion-button (click)="metenMaar()">METEN</ion-button>
 
-    <ion-list>
-      <ion-item *ngFor='let locatie of locaties'>
-        <ion-label>
-          {{locatie}}
+    <ion-list >
+      <ion-item  *ngFor='let gekuisteMeting of gekuisteMetingen.meetpunten'>
+        <ion-label class="home-item">
+          {{gekuisteMeting.SSID}}
         </ion-label>
-
+        <ion-label class="home-item"> channel:</ion-label>
+        <ion-label class="home-item">
+          {{gekuisteMeting.channel}}
+        </ion-label>
+        <ion-label class="home-item">level:</ion-label>
+        <ion-label class="home-item">
+          {{gekuisteMeting.level}}
+        </ion-label>
       </ion-item>
     </ion-list>
+
+    <ion-button (click)="getSSIDS()">Doe Meting</ion-button>
+
 
 
   </div>
